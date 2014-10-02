@@ -1,0 +1,12 @@
+inflation_stats
+glossary_terms
+django_migrations
+django_content_type
+budget_items
+population_stats
+institutional_categories
+funding_categories
+functional_categories
+economic_categories
+budgets
+entities

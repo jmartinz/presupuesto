@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<database name="presupuestos" schema="public" type="PostgreSQL - 9.3.5">
+   <tables>
+      <table name="budget_items" numRows="5508" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('budget_items_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial"/>
+         <column autoUpdated="false" digits="0" id="1" name="budget_id" nullable="false" remarks="" size="10" type="int4">
+            <parent column="id" foreignKey="budget_items_budget_id_fkey" implied="false" onDeleteCascade="false" table="budgets"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="2" name="actual" nullable="false" remarks="" size="1" type="bool"/>
+         <column autoUpdated="false" digits="0" id="3" name="expense" nullable="false" remarks="" size="1" type="bool"/>
+         <column autoUpdated="false" digits="0" id="4" name="description" nullable="false" remarks="" size="512" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="5" name="amount" nullable="false" remarks="" size="19" type="int8"/>
+         <column autoUpdated="false" digits="0" id="6" name="economic_category_id" nullable="false" remarks="" size="10" type="int4">
+            <parent column="id" foreignKey="budget_items_economic_category_id_fkey" implied="false" onDeleteCascade="false" table="economic_categories"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="7" name="functional_category_id" nullable="false" remarks="" size="10" type="int4">
+            <parent column="id" foreignKey="budget_items_functional_category_id_fkey" implied="false" onDeleteCascade="false" table="functional_categories"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="8" name="funding_category_id" nullable="false" remarks="" size="10" type="int4">
+            <parent column="id" foreignKey="budget_items_funding_category_id_fkey" implied="false" onDeleteCascade="false" table="funding_categories"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="9" name="institutional_category_id" nullable="false" remarks="" size="10" type="int4">
+            <parent column="id" foreignKey="budget_items_institutional_category_id_fkey" implied="false" onDeleteCascade="false" table="institutional_categories"/>
+         </column>
+         <column autoUpdated="false" digits="6" id="10" name="updated_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <column autoUpdated="false" digits="6" id="11" name="created_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="budget_items_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="budget_items_budget_id" unique="false">
+            <column ascending="true" name="budget_id"/>
+         </index>
+         <index name="budget_items_economic_category_id" unique="false">
+            <column ascending="true" name="economic_category_id"/>
+         </index>
+         <index name="budget_items_functional_category_id" unique="false">
+            <column ascending="true" name="functional_category_id"/>
+         </index>
+         <index name="budget_items_funding_category_id" unique="false">
+            <column ascending="true" name="funding_category_id"/>
+         </index>
+         <index name="budget_items_institutional_category_id" unique="false">
+            <column ascending="true" name="institutional_category_id"/>
+         </index>
+      </table>
+      <table name="budgets" numRows="34" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('budgets_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial">
+            <child column="budget_id" foreignKey="budget_items_budget_id_fkey" implied="false" onDeleteCascade="false" table="budget_items"/>
+            <child column="budget_id" foreignKey="budget_id_refs_id_5d72575d" implied="false" onDeleteCascade="false" table="economic_categories"/>
+            <child column="budget_id" foreignKey="budget_id_refs_id_f3364b02" implied="false" onDeleteCascade="false" table="functional_categories"/>
+            <child column="budget_id" foreignKey="budget_id_refs_id_ad7d5e7c" implied="false" onDeleteCascade="false" table="funding_categories"/>
+            <child column="budget_id" foreignKey="budget_id_refs_id_c78dbbca" implied="false" onDeleteCascade="false" table="institutional_categories"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="entity_id" nullable="false" remarks="" size="10" type="int4">
+            <parent column="id" foreignKey="budgets_entity_id_fkey" implied="false" onDeleteCascade="false" table="entities"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="2" name="year" nullable="false" remarks="" size="10" type="int4"/>
+         <column autoUpdated="false" digits="6" id="3" name="updated_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <column autoUpdated="false" digits="6" id="4" name="created_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="budgets_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="budgets_entity_id" unique="false">
+            <column ascending="true" name="entity_id"/>
+         </index>
+      </table>
+      <table name="django_content_type" numRows="11" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('django_content_type_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial"/>
+         <column autoUpdated="false" digits="0" id="1" name="name" nullable="false" remarks="" size="100" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="2" name="app_label" nullable="false" remarks="" size="100" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="3" name="model" nullable="false" remarks="" size="100" type="varchar"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="django_content_type_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="django_content_type_app_label_45f3b1d93ec8c61c_uniq" unique="true">
+            <column ascending="true" name="app_label"/>
+            <column ascending="true" name="model"/>
+         </index>
+      </table>
+      <table name="django_migrations" numRows="1" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('django_migrations_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial"/>
+         <column autoUpdated="false" digits="0" id="1" name="app" nullable="false" remarks="" size="255" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="2" name="name" nullable="false" remarks="" size="255" type="varchar"/>
+         <column autoUpdated="false" digits="6" id="3" name="applied" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="django_migrations_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
+      <table name="economic_categories" numRows="26514" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('economic_categories_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial">
+            <child column="economic_category_id" foreignKey="budget_items_economic_category_id_fkey" implied="false" onDeleteCascade="false" table="budget_items"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="budget_id" nullable="false" remarks="" size="10" type="int4">
+            <parent column="id" foreignKey="budget_id_refs_id_5d72575d" implied="false" onDeleteCascade="false" table="budgets"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="2" name="expense" nullable="false" remarks="" size="1" type="bool"/>
+         <column autoUpdated="false" digits="0" id="3" name="chapter" nullable="false" remarks="" size="1" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="4" name="article" nullable="true" remarks="" size="2" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="5" name="heading" nullable="true" remarks="" size="3" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="6" name="subheading" nullable="true" remarks="" size="6" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="7" name="description" nullable="false" remarks="" size="300" type="varchar"/>
+         <column autoUpdated="false" digits="6" id="8" name="updated_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <column autoUpdated="false" digits="6" id="9" name="created_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="economic_categories_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="economic_categories_budget_id" unique="false">
+            <column ascending="true" name="budget_id"/>
+         </index>
+      </table>
+      <table name="entities" numRows="765" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('entities_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial">
+            <child column="entity_id" foreignKey="budgets_entity_id_fkey" implied="false" onDeleteCascade="false" table="budgets"/>
+            <child column="entity_id" foreignKey="population_stats_entity_id_fkey" implied="false" onDeleteCascade="false" table="population_stats"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="code" nullable="false" remarks="" size="10" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="2" name="level" nullable="false" remarks="" size="20" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="3" name="name" nullable="false" remarks="" size="200" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="4" name="slug" nullable="false" remarks="" size="50" type="varchar"/>
+         <column autoUpdated="false" digits="6" id="5" name="updated_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <column autoUpdated="false" digits="6" id="6" name="created_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="entities_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="entities_code" unique="false">
+            <column ascending="true" name="code"/>
+         </index>
+         <index name="entities_code_like" unique="false">
+            <column ascending="true" name="code"/>
+         </index>
+         <index name="entities_level" unique="false">
+            <column ascending="true" name="level"/>
+         </index>
+         <index name="entities_level_like" unique="false">
+            <column ascending="true" name="level"/>
+         </index>
+         <index name="entities_name" unique="false">
+            <column ascending="true" name="name"/>
+         </index>
+         <index name="entities_name_like" unique="false">
+            <column ascending="true" name="name"/>
+         </index>
+         <index name="entities_slug_key" unique="true">
+            <column ascending="true" name="slug"/>
+         </index>
+         <index name="entities_slug_like" unique="false">
+            <column ascending="true" name="slug"/>
+         </index>
+      </table>
+      <table name="functional_categories" numRows="4206" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('functional_categories_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial">
+            <child column="functional_category_id" foreignKey="budget_items_functional_category_id_fkey" implied="false" onDeleteCascade="false" table="budget_items"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="budget_id" nullable="false" remarks="" size="10" type="int4">
+            <parent column="id" foreignKey="budget_id_refs_id_f3364b02" implied="false" onDeleteCascade="false" table="budgets"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="2" name="area" nullable="false" remarks="" size="1" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="3" name="policy" nullable="true" remarks="" size="3" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="4" name="function" nullable="true" remarks="" size="5" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="5" name="programme" nullable="true" remarks="" size="5" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="6" name="description" nullable="false" remarks="" size="200" type="varchar"/>
+         <column autoUpdated="false" digits="6" id="7" name="updated_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <column autoUpdated="false" digits="6" id="8" name="created_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="functional_categories_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="functional_categories_budget_id" unique="false">
+            <column ascending="true" name="budget_id"/>
+         </index>
+      </table>
+      <table name="funding_categories" numRows="641" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('funding_categories_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial">
+            <child column="funding_category_id" foreignKey="budget_items_funding_category_id_fkey" implied="false" onDeleteCascade="false" table="budget_items"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="budget_id" nullable="false" remarks="" size="10" type="int4">
+            <parent column="id" foreignKey="budget_id_refs_id_ad7d5e7c" implied="false" onDeleteCascade="false" table="budgets"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="2" name="expense" nullable="false" remarks="" size="1" type="bool"/>
+         <column autoUpdated="false" digits="0" id="3" name="source" nullable="false" remarks="" size="1" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="4" name="fund_class" nullable="true" remarks="" size="2" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="5" name="fund" nullable="true" remarks="" size="5" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="6" name="description" nullable="false" remarks="" size="200" type="varchar"/>
+         <column autoUpdated="false" digits="6" id="7" name="updated_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <column autoUpdated="false" digits="6" id="8" name="created_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="funding_categories_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="funding_categories_budget_id" unique="false">
+            <column ascending="true" name="budget_id"/>
+         </index>
+      </table>
+      <table name="glossary_terms" numRows="15" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('glossary_terms_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial"/>
+         <column autoUpdated="false" digits="0" id="1" name="title" nullable="false" remarks="" size="100" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="2" name="description" nullable="false" remarks="" size="2000" type="varchar"/>
+         <column autoUpdated="false" digits="6" id="3" name="updated_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <column autoUpdated="false" digits="6" id="4" name="created_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="glossary_terms_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
+      <table name="inflation_stats" numRows="10" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('inflation_stats_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial"/>
+         <column autoUpdated="false" digits="0" id="1" name="year" nullable="false" remarks="" size="10" type="int4"/>
+         <column autoUpdated="false" digits="17" id="2" name="inflation" nullable="false" remarks="" size="17" type="float8"/>
+         <column autoUpdated="false" digits="6" id="3" name="updated_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <column autoUpdated="false" digits="6" id="4" name="created_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="inflation_stats_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
+      <table name="institutional_categories" numRows="648" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('institutional_categories_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial">
+            <child column="institutional_category_id" foreignKey="budget_items_institutional_category_id_fkey" implied="false" onDeleteCascade="false" table="budget_items"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="budget_id" nullable="false" remarks="" size="10" type="int4">
+            <parent column="id" foreignKey="budget_id_refs_id_c78dbbca" implied="false" onDeleteCascade="false" table="budgets"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="2" name="institution" nullable="false" remarks="" size="5" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="3" name="section" nullable="true" remarks="" size="8" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="4" name="department" nullable="true" remarks="" size="11" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="5" name="description" nullable="false" remarks="" size="200" type="varchar"/>
+         <column autoUpdated="false" digits="6" id="6" name="updated_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <column autoUpdated="false" digits="6" id="7" name="created_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="institutional_categories_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="institutional_categories_budget_id" unique="false">
+            <column ascending="true" name="budget_id"/>
+         </index>
+      </table>
+      <table name="population_stats" numRows="3033" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('population_stats_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial"/>
+         <column autoUpdated="false" digits="0" id="1" name="entity_id" nullable="false" remarks="" size="10" type="int4">
+            <parent column="id" foreignKey="population_stats_entity_id_fkey" implied="false" onDeleteCascade="false" table="entities"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="2" name="year" nullable="false" remarks="" size="10" type="int4"/>
+         <column autoUpdated="false" digits="0" id="3" name="population" nullable="false" remarks="" size="10" type="int4"/>
+         <column autoUpdated="false" digits="6" id="4" name="updated_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <column autoUpdated="false" digits="6" id="5" name="created_at" nullable="false" remarks="" size="35" type="timestamptz"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="population_stats_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="population_stats_entity_id" unique="false">
+            <column ascending="true" name="entity_id"/>
+         </index>
+      </table>
+   </tables>
+</database>
