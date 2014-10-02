@@ -32,10 +32,7 @@ Para instalar la aplicación en local es necesario seguir los siguientes pasos:
 * Instalar los componentes utilizados por la aplicación:
 
         $ pip install Coffin Django Jinja2 Pygments psycopg2 xlwt
-        JMMP -> pip psycopg2  Error: pg_config executable not found. No está instalada : libpq-dev
-        JMMP -> error: could not create '/usr/local/lib/python2.7/dist-packages/tests': Permission denied EJECUTAR con sudo
-
-JMMP En principio, según documentación técnica va solo sobre postgrsql
+        
 * Borrar base de datos:
         $ dropdb -h localhost presupuestos
 
