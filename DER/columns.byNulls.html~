@@ -46,7 +46,23 @@
    </table>
   </td></tr>
  </table>
-
+<div style="margin-right: 2pt;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-9598353634003340";
+google_ad_channel ="SchemaSpy-generated";
+google_ad_width = 234;
+google_ad_height = 60;
+google_ad_format = "234x60_as";
+google_ad_type = "text";
+google_color_border = "9bab96";
+google_color_link = "489148";
+google_color_text = "000000";
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
 &nbsp;
 </td></tr>
 <tr valign='top'><td class='container' align='left' valign='top'>
@@ -73,131 +89,111 @@
   <th class='notSortedByColumn'><a href='columns.byColumn.html#columns'><span class='notSortedByColumn'>Column</span></a></th>
   <th class='notSortedByColumn'><a href='columns.byType.html#columns'><span class='notSortedByColumn'>Type</span></a></th>
   <th class='notSortedByColumn'><a href='columns.bySize.html#columns'><span class='notSortedByColumn'>Size</span></a></th>
-  <th title='Are nulls allowed?' class='notSortedByColumn'><a href='columns.byNulls.html#columns'><span class='notSortedByColumn'>Nulls</span></a></th>
+  <th title='Are nulls allowed?' class='sortedByColumn'>Nulls</th>
   <th title='Is column automatically updated?' class='notSortedByColumn'><a href='columns.byAuto.html#columns'><span class='notSortedByColumn'>Auto</span></a></th>
-  <th title='Default value' class='sortedByColumn'>Default</th>
+  <th title='Default value' class='notSortedByColumn'><a href='columns.byDefault.html#columns'><span class='notSortedByColumn'>Default</span></a></th>
   <th title='Comments' class='comment'><span class='notSortedByColumn'>Comments</span></th>
 </tr>
 </thead>
 <tbody valign='top'>
 <tr class='even'>
- <td class='detail'><a href='tables/budget_items.html'>budget_items</a></td>
- <td class='primaryKey' title='Primary Key'>id</td>
- <td class='detail'>serial</td>
- <td class='detail' align='right'>10</td>
- <td class='detail' align='center'></td>
- <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='right'>nextval('budget_items_id_seq'::regclass)</td>
- <td class='comment detail'></td>
-</tr>
-<tr class='odd'>
- <td class='detail'><a href='tables/budgets.html'>budgets</a></td>
- <td class='primaryKey' title='Primary Key'>id</td>
- <td class='detail'>serial</td>
- <td class='detail' align='right'>10</td>
- <td class='detail' align='center'></td>
- <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='right'>nextval('budgets_id_seq'::regclass)</td>
- <td class='comment detail'></td>
-</tr>
-<tr class='even'>
- <td class='detail'><a href='tables/django_content_type.html'>django_content_type</a></td>
- <td class='primaryKey' title='Primary Key'>id</td>
- <td class='detail'>serial</td>
- <td class='detail' align='right'>10</td>
- <td class='detail' align='center'></td>
- <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='right'>nextval('django_content_type_id_seq'::regclass)</td>
- <td class='comment detail'></td>
-</tr>
-<tr class='odd'>
- <td class='detail'><a href='tables/django_migrations.html'>django_migrations</a></td>
- <td class='primaryKey' title='Primary Key'>id</td>
- <td class='detail'>serial</td>
- <td class='detail' align='right'>10</td>
- <td class='detail' align='center'></td>
- <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='right'>nextval('django_migrations_id_seq'::regclass)</td>
- <td class='comment detail'></td>
-</tr>
-<tr class='even'>
  <td class='detail'><a href='tables/economic_categories.html'>economic_categories</a></td>
- <td class='primaryKey' title='Primary Key'>id</td>
- <td class='detail'>serial</td>
- <td class='detail' align='right'>10</td>
+ <td class='detail'>article</td>
+ <td class='detail'>varchar</td>
+ <td class='detail' align='right'>2</td>
+ <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
  <td class='detail' align='center'></td>
- <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='right'>nextval('economic_categories_id_seq'::regclass)</td>
+ <td class='detail' align='right'>null</td>
  <td class='comment detail'></td>
 </tr>
 <tr class='odd'>
- <td class='detail'><a href='tables/entities.html'>entities</a></td>
- <td class='primaryKey' title='Primary Key'>id</td>
- <td class='detail'>serial</td>
- <td class='detail' align='right'>10</td>
+ <td class='detail'><a href='tables/institutional_categories.html'>institutional_categories</a></td>
+ <td class='detail'>department</td>
+ <td class='detail'>varchar</td>
+ <td class='detail' align='right'>11</td>
+ <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
  <td class='detail' align='center'></td>
- <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='right'>nextval('entities_id_seq'::regclass)</td>
+ <td class='detail' align='right'>null</td>
  <td class='comment detail'></td>
 </tr>
 <tr class='even'>
  <td class='detail'><a href='tables/functional_categories.html'>functional_categories</a></td>
- <td class='primaryKey' title='Primary Key'>id</td>
- <td class='detail'>serial</td>
- <td class='detail' align='right'>10</td>
+ <td class='detail'>function</td>
+ <td class='detail'>varchar</td>
+ <td class='detail' align='right'>5</td>
+ <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
  <td class='detail' align='center'></td>
- <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='right'>nextval('functional_categories_id_seq'::regclass)</td>
+ <td class='detail' align='right'>null</td>
  <td class='comment detail'></td>
 </tr>
 <tr class='odd'>
  <td class='detail'><a href='tables/funding_categories.html'>funding_categories</a></td>
- <td class='primaryKey' title='Primary Key'>id</td>
- <td class='detail'>serial</td>
- <td class='detail' align='right'>10</td>
+ <td class='detail'>fund</td>
+ <td class='detail'>varchar</td>
+ <td class='detail' align='right'>5</td>
+ <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
  <td class='detail' align='center'></td>
- <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='right'>nextval('funding_categories_id_seq'::regclass)</td>
+ <td class='detail' align='right'>null</td>
  <td class='comment detail'></td>
 </tr>
 <tr class='even'>
- <td class='detail'><a href='tables/glossary_terms.html'>glossary_terms</a></td>
- <td class='primaryKey' title='Primary Key'>id</td>
- <td class='detail'>serial</td>
- <td class='detail' align='right'>10</td>
+ <td class='detail'><a href='tables/funding_categories.html'>funding_categories</a></td>
+ <td class='detail'>fund_class</td>
+ <td class='detail'>varchar</td>
+ <td class='detail' align='right'>2</td>
+ <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
  <td class='detail' align='center'></td>
- <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='right'>nextval('glossary_terms_id_seq'::regclass)</td>
+ <td class='detail' align='right'>null</td>
  <td class='comment detail'></td>
 </tr>
 <tr class='odd'>
- <td class='detail'><a href='tables/inflation_stats.html'>inflation_stats</a></td>
- <td class='primaryKey' title='Primary Key'>id</td>
- <td class='detail'>serial</td>
- <td class='detail' align='right'>10</td>
+ <td class='detail'><a href='tables/economic_categories.html'>economic_categories</a></td>
+ <td class='detail'>heading</td>
+ <td class='detail'>varchar</td>
+ <td class='detail' align='right'>3</td>
+ <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
  <td class='detail' align='center'></td>
- <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='right'>nextval('inflation_stats_id_seq'::regclass)</td>
+ <td class='detail' align='right'>null</td>
+ <td class='comment detail'></td>
+</tr>
+<tr class='even'>
+ <td class='detail'><a href='tables/functional_categories.html'>functional_categories</a></td>
+ <td class='detail'>policy</td>
+ <td class='detail'>varchar</td>
+ <td class='detail' align='right'>3</td>
+ <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
+ <td class='detail' align='center'></td>
+ <td class='detail' align='right'>null</td>
+ <td class='comment detail'></td>
+</tr>
+<tr class='odd'>
+ <td class='detail'><a href='tables/functional_categories.html'>functional_categories</a></td>
+ <td class='detail'>programme</td>
+ <td class='detail'>varchar</td>
+ <td class='detail' align='right'>5</td>
+ <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
+ <td class='detail' align='center'></td>
+ <td class='detail' align='right'>null</td>
  <td class='comment detail'></td>
 </tr>
 <tr class='even'>
  <td class='detail'><a href='tables/institutional_categories.html'>institutional_categories</a></td>
- <td class='primaryKey' title='Primary Key'>id</td>
- <td class='detail'>serial</td>
- <td class='detail' align='right'>10</td>
+ <td class='detail'>section</td>
+ <td class='detail'>varchar</td>
+ <td class='detail' align='right'>8</td>
+ <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
  <td class='detail' align='center'></td>
- <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='right'>nextval('institutional_categories_id_seq'::regclass)</td>
+ <td class='detail' align='right'>null</td>
  <td class='comment detail'></td>
 </tr>
 <tr class='odd'>
- <td class='detail'><a href='tables/population_stats.html'>population_stats</a></td>
- <td class='primaryKey' title='Primary Key'>id</td>
- <td class='detail'>serial</td>
- <td class='detail' align='right'>10</td>
+ <td class='detail'><a href='tables/economic_categories.html'>economic_categories</a></td>
+ <td class='detail'>subheading</td>
+ <td class='detail'>varchar</td>
+ <td class='detail' align='right'>6</td>
+ <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
  <td class='detail' align='center'></td>
- <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='right'>nextval('population_stats_id_seq'::regclass)</td>
+ <td class='detail' align='right'>null</td>
  <td class='comment detail'></td>
 </tr>
 <tr class='even'>
@@ -261,16 +257,6 @@
  <td class='comment detail'></td>
 </tr>
 <tr class='even'>
- <td class='detail'><a href='tables/economic_categories.html'>economic_categories</a></td>
- <td class='detail'>article</td>
- <td class='detail'>varchar</td>
- <td class='detail' align='right'>2</td>
- <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='center'></td>
- <td class='detail' align='right'>null</td>
- <td class='comment detail'></td>
-</tr>
-<tr class='odd'>
  <td class='detail'><a href='tables/budget_items.html'>budget_items</a></td>
  <td class='indexedColumn' title='Indexed'>budget_id</td>
  <td class='detail'>int4</td>
@@ -280,7 +266,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'><a href='tables/economic_categories.html'>economic_categories</a></td>
  <td class='indexedColumn' title='Indexed'>budget_id</td>
  <td class='detail'>int4</td>
@@ -290,7 +276,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'><a href='tables/functional_categories.html'>functional_categories</a></td>
  <td class='indexedColumn' title='Indexed'>budget_id</td>
  <td class='detail'>int4</td>
@@ -300,7 +286,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'><a href='tables/funding_categories.html'>funding_categories</a></td>
  <td class='indexedColumn' title='Indexed'>budget_id</td>
  <td class='detail'>int4</td>
@@ -310,7 +296,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'><a href='tables/institutional_categories.html'>institutional_categories</a></td>
  <td class='indexedColumn' title='Indexed'>budget_id</td>
  <td class='detail'>int4</td>
@@ -320,7 +306,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'><a href='tables/economic_categories.html'>economic_categories</a></td>
  <td class='detail'>chapter</td>
  <td class='detail'>varchar</td>
@@ -330,7 +316,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'><a href='tables/entities.html'>entities</a></td>
  <td class='indexedColumn' title='Indexed'>code</td>
  <td class='detail'>varchar</td>
@@ -340,7 +326,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'><a href='tables/budget_items.html'>budget_items</a></td>
  <td class='detail'>created_at</td>
  <td class='detail'>timestamptz</td>
@@ -350,7 +336,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'><a href='tables/budgets.html'>budgets</a></td>
  <td class='detail'>created_at</td>
  <td class='detail'>timestamptz</td>
@@ -360,7 +346,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'><a href='tables/economic_categories.html'>economic_categories</a></td>
  <td class='detail'>created_at</td>
  <td class='detail'>timestamptz</td>
@@ -370,7 +356,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'><a href='tables/entities.html'>entities</a></td>
  <td class='detail'>created_at</td>
  <td class='detail'>timestamptz</td>
@@ -380,7 +366,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'><a href='tables/functional_categories.html'>functional_categories</a></td>
  <td class='detail'>created_at</td>
  <td class='detail'>timestamptz</td>
@@ -390,7 +376,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'><a href='tables/funding_categories.html'>funding_categories</a></td>
  <td class='detail'>created_at</td>
  <td class='detail'>timestamptz</td>
@@ -400,7 +386,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'><a href='tables/glossary_terms.html'>glossary_terms</a></td>
  <td class='detail'>created_at</td>
  <td class='detail'>timestamptz</td>
@@ -410,7 +396,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'><a href='tables/inflation_stats.html'>inflation_stats</a></td>
  <td class='detail'>created_at</td>
  <td class='detail'>timestamptz</td>
@@ -420,7 +406,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'><a href='tables/institutional_categories.html'>institutional_categories</a></td>
  <td class='detail'>created_at</td>
  <td class='detail'>timestamptz</td>
@@ -430,7 +416,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'><a href='tables/population_stats.html'>population_stats</a></td>
  <td class='detail'>created_at</td>
  <td class='detail'>timestamptz</td>
@@ -438,16 +424,6 @@
  <td class='detail' align='center'></td>
  <td class='detail' align='center'></td>
  <td class='detail'></td>
- <td class='comment detail'></td>
-</tr>
-<tr class='even'>
- <td class='detail'><a href='tables/institutional_categories.html'>institutional_categories</a></td>
- <td class='detail'>department</td>
- <td class='detail'>varchar</td>
- <td class='detail' align='right'>11</td>
- <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='center'></td>
- <td class='detail' align='right'>null</td>
  <td class='comment detail'></td>
 </tr>
 <tr class='odd'>
@@ -571,16 +547,6 @@
  <td class='comment detail'></td>
 </tr>
 <tr class='odd'>
- <td class='detail'><a href='tables/functional_categories.html'>functional_categories</a></td>
- <td class='detail'>function</td>
- <td class='detail'>varchar</td>
- <td class='detail' align='right'>5</td>
- <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='center'></td>
- <td class='detail' align='right'>null</td>
- <td class='comment detail'></td>
-</tr>
-<tr class='even'>
  <td class='detail'><a href='tables/budget_items.html'>budget_items</a></td>
  <td class='indexedColumn' title='Indexed'>functional_category_id</td>
  <td class='detail'>int4</td>
@@ -590,27 +556,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
- <td class='detail'><a href='tables/funding_categories.html'>funding_categories</a></td>
- <td class='detail'>fund</td>
- <td class='detail'>varchar</td>
- <td class='detail' align='right'>5</td>
- <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='center'></td>
- <td class='detail' align='right'>null</td>
- <td class='comment detail'></td>
-</tr>
 <tr class='even'>
- <td class='detail'><a href='tables/funding_categories.html'>funding_categories</a></td>
- <td class='detail'>fund_class</td>
- <td class='detail'>varchar</td>
- <td class='detail' align='right'>2</td>
- <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='center'></td>
- <td class='detail' align='right'>null</td>
- <td class='comment detail'></td>
-</tr>
-<tr class='odd'>
  <td class='detail'><a href='tables/budget_items.html'>budget_items</a></td>
  <td class='indexedColumn' title='Indexed'>funding_category_id</td>
  <td class='detail'>int4</td>
@@ -620,14 +566,124 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
- <td class='detail'><a href='tables/economic_categories.html'>economic_categories</a></td>
- <td class='detail'>heading</td>
- <td class='detail'>varchar</td>
- <td class='detail' align='right'>3</td>
- <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
+<tr class='odd'>
+ <td class='detail'><a href='tables/budget_items.html'>budget_items</a></td>
+ <td class='primaryKey' title='Primary Key'>id</td>
+ <td class='detail'>serial</td>
+ <td class='detail' align='right'>10</td>
  <td class='detail' align='center'></td>
- <td class='detail' align='right'>null</td>
+ <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
+ <td class='detail' align='right'>nextval('budget_items_id_seq'::regclass)</td>
+ <td class='comment detail'></td>
+</tr>
+<tr class='even'>
+ <td class='detail'><a href='tables/budgets.html'>budgets</a></td>
+ <td class='primaryKey' title='Primary Key'>id</td>
+ <td class='detail'>serial</td>
+ <td class='detail' align='right'>10</td>
+ <td class='detail' align='center'></td>
+ <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
+ <td class='detail' align='right'>nextval('budgets_id_seq'::regclass)</td>
+ <td class='comment detail'></td>
+</tr>
+<tr class='odd'>
+ <td class='detail'><a href='tables/django_content_type.html'>django_content_type</a></td>
+ <td class='primaryKey' title='Primary Key'>id</td>
+ <td class='detail'>serial</td>
+ <td class='detail' align='right'>10</td>
+ <td class='detail' align='center'></td>
+ <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
+ <td class='detail' align='right'>nextval('django_content_type_id_seq'::regclass)</td>
+ <td class='comment detail'></td>
+</tr>
+<tr class='even'>
+ <td class='detail'><a href='tables/django_migrations.html'>django_migrations</a></td>
+ <td class='primaryKey' title='Primary Key'>id</td>
+ <td class='detail'>serial</td>
+ <td class='detail' align='right'>10</td>
+ <td class='detail' align='center'></td>
+ <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
+ <td class='detail' align='right'>nextval('django_migrations_id_seq'::regclass)</td>
+ <td class='comment detail'></td>
+</tr>
+<tr class='odd'>
+ <td class='detail'><a href='tables/economic_categories.html'>economic_categories</a></td>
+ <td class='primaryKey' title='Primary Key'>id</td>
+ <td class='detail'>serial</td>
+ <td class='detail' align='right'>10</td>
+ <td class='detail' align='center'></td>
+ <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
+ <td class='detail' align='right'>nextval('economic_categories_id_seq'::regclass)</td>
+ <td class='comment detail'></td>
+</tr>
+<tr class='even'>
+ <td class='detail'><a href='tables/entities.html'>entities</a></td>
+ <td class='primaryKey' title='Primary Key'>id</td>
+ <td class='detail'>serial</td>
+ <td class='detail' align='right'>10</td>
+ <td class='detail' align='center'></td>
+ <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
+ <td class='detail' align='right'>nextval('entities_id_seq'::regclass)</td>
+ <td class='comment detail'></td>
+</tr>
+<tr class='odd'>
+ <td class='detail'><a href='tables/functional_categories.html'>functional_categories</a></td>
+ <td class='primaryKey' title='Primary Key'>id</td>
+ <td class='detail'>serial</td>
+ <td class='detail' align='right'>10</td>
+ <td class='detail' align='center'></td>
+ <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
+ <td class='detail' align='right'>nextval('functional_categories_id_seq'::regclass)</td>
+ <td class='comment detail'></td>
+</tr>
+<tr class='even'>
+ <td class='detail'><a href='tables/funding_categories.html'>funding_categories</a></td>
+ <td class='primaryKey' title='Primary Key'>id</td>
+ <td class='detail'>serial</td>
+ <td class='detail' align='right'>10</td>
+ <td class='detail' align='center'></td>
+ <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
+ <td class='detail' align='right'>nextval('funding_categories_id_seq'::regclass)</td>
+ <td class='comment detail'></td>
+</tr>
+<tr class='odd'>
+ <td class='detail'><a href='tables/glossary_terms.html'>glossary_terms</a></td>
+ <td class='primaryKey' title='Primary Key'>id</td>
+ <td class='detail'>serial</td>
+ <td class='detail' align='right'>10</td>
+ <td class='detail' align='center'></td>
+ <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
+ <td class='detail' align='right'>nextval('glossary_terms_id_seq'::regclass)</td>
+ <td class='comment detail'></td>
+</tr>
+<tr class='even'>
+ <td class='detail'><a href='tables/inflation_stats.html'>inflation_stats</a></td>
+ <td class='primaryKey' title='Primary Key'>id</td>
+ <td class='detail'>serial</td>
+ <td class='detail' align='right'>10</td>
+ <td class='detail' align='center'></td>
+ <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
+ <td class='detail' align='right'>nextval('inflation_stats_id_seq'::regclass)</td>
+ <td class='comment detail'></td>
+</tr>
+<tr class='odd'>
+ <td class='detail'><a href='tables/institutional_categories.html'>institutional_categories</a></td>
+ <td class='primaryKey' title='Primary Key'>id</td>
+ <td class='detail'>serial</td>
+ <td class='detail' align='right'>10</td>
+ <td class='detail' align='center'></td>
+ <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
+ <td class='detail' align='right'>nextval('institutional_categories_id_seq'::regclass)</td>
+ <td class='comment detail'></td>
+</tr>
+<tr class='even'>
+ <td class='detail'><a href='tables/population_stats.html'>population_stats</a></td>
+ <td class='primaryKey' title='Primary Key'>id</td>
+ <td class='detail'>serial</td>
+ <td class='detail' align='right'>10</td>
+ <td class='detail' align='center'></td>
+ <td class='detail' align='center' title='Automatically updated by the database'>&nbsp;&radic;&nbsp;</td>
+ <td class='detail' align='right'>nextval('population_stats_id_seq'::regclass)</td>
  <td class='comment detail'></td>
 </tr>
 <tr class='odd'>
@@ -711,16 +767,6 @@
  <td class='comment detail'></td>
 </tr>
 <tr class='odd'>
- <td class='detail'><a href='tables/functional_categories.html'>functional_categories</a></td>
- <td class='detail'>policy</td>
- <td class='detail'>varchar</td>
- <td class='detail' align='right'>3</td>
- <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='center'></td>
- <td class='detail' align='right'>null</td>
- <td class='comment detail'></td>
-</tr>
-<tr class='even'>
  <td class='detail'><a href='tables/population_stats.html'>population_stats</a></td>
  <td class='detail'>population</td>
  <td class='detail'>int4</td>
@@ -730,27 +776,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
- <td class='detail'><a href='tables/functional_categories.html'>functional_categories</a></td>
- <td class='detail'>programme</td>
- <td class='detail'>varchar</td>
- <td class='detail' align='right'>5</td>
- <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='center'></td>
- <td class='detail' align='right'>null</td>
- <td class='comment detail'></td>
-</tr>
 <tr class='even'>
- <td class='detail'><a href='tables/institutional_categories.html'>institutional_categories</a></td>
- <td class='detail'>section</td>
- <td class='detail'>varchar</td>
- <td class='detail' align='right'>8</td>
- <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='center'></td>
- <td class='detail' align='right'>null</td>
- <td class='comment detail'></td>
-</tr>
-<tr class='odd'>
  <td class='detail'><a href='tables/entities.html'>entities</a></td>
  <td class='indexedColumn' title='Indexed'>slug</td>
  <td class='detail'>varchar</td>
@@ -760,7 +786,7 @@
  <td class='detail'></td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'><a href='tables/funding_categories.html'>funding_categories</a></td>
  <td class='detail'>source</td>
  <td class='detail'>varchar</td>
@@ -768,16 +794,6 @@
  <td class='detail' align='center'></td>
  <td class='detail' align='center'></td>
  <td class='detail'></td>
- <td class='comment detail'></td>
-</tr>
-<tr class='odd'>
- <td class='detail'><a href='tables/economic_categories.html'>economic_categories</a></td>
- <td class='detail'>subheading</td>
- <td class='detail'>varchar</td>
- <td class='detail' align='right'>6</td>
- <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
- <td class='detail' align='center'></td>
- <td class='detail' align='right'>null</td>
  <td class='comment detail'></td>
 </tr>
 <tr class='even'>
